@@ -16,11 +16,7 @@ public:
         x = x2;
         y = y2;
     }
-    ~Point()
-    {
-        x = 0;
-        y = 0;
-    }
+    
     void set(int x2, int y2)
     {
         x = x2;
@@ -54,6 +50,9 @@ class threeDPoints : public Point
     int z;
 
 public:
+    threeDPoints():Point(){
+z=0;
+    }
     threeDPoints(int x2, int y2, int z2) : Point(x2, y2)
     {
         z = z2;
